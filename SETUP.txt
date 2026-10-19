@@ -1,0 +1,25 @@
+DOORS VS. WHEELS — GITHUB PAGES SETUP
+
+1. Create a public GitHub repository named doors-vs-wheels. Enable Add README.
+2. Unzip this download. On the repository's Code tab, choose Add file > Upload files.
+3. Upload index.html, style.css, app.js, model.js, and favicon.svg to the repository root. Commit the changes to main.
+4. Open Settings > Pages. Choose Deploy from a branch, main, and /(root). Save.
+5. Wait for publication, then use Visit site on the Pages settings screen.
+
+The address will normally be https://YOUR-USERNAME.github.io/doors-vs-wheels/.
+The website and source repository will be public with this free setup.
+
+The optional empty .nojekyll file bypasses Jekyll if uploaded; the website also works with GitHub's default static-file handling without it.
+No build step, server, API key, or ChatGPT hosting is required.
+All links between website files are relative, so repository subpaths work.
+The former ChatGPT canonical URL has been removed from this copy.
+
+COUNTER MODEL
+The counter starts from an assumed baseline of 78.5 billion doors and 98 billion wheels at 2026-10-19 00:00 UTC.
+It projects manufacture minus physical destruction from the browser clock.
+The 23-source ledger, category assumptions, controls, and JSON export are included.
+It does not automatically retrieve fresh statistics. The projection stops after one model year pending research review.
+Change model.js when reviewing estimates. Upload changed files to main to publish updates.
+
+GitHub's instructions:
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site

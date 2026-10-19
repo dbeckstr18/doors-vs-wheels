@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#f4f1e9">
+ <meta name="description" content="A live, research-informed estimate of doors and wheels on Earth. Explore the counts, challenge the assumptions, and follow the evidence.">
+ <title>Doors vs. Wheels — The World Counter</title>
+ <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="./style.css">
+ <script type="module" src="./app.js"></script>
+</head>
+<body>
+ <a class="skip" href="#counter">Skip to counters</a>
+ <header class="site-header shell">
+  <a class="brand" href="#top" aria-label="Doors versus Wheels home"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>DOORS <span class="brand-vs">/</span> WHEELS</span></a>
+  <nav aria-label="Main navigation"><a href="#assumptions">The assumptions</a><a href="#evidence">The evidence <span aria-hidden="true">↗</span></a></nav>
+ </header>
+ <main id="top">
+  <section class="hero shell" aria-labelledby="main-title">
+   <div><p class="eyebrow"><span class="live-dot"></span> A LIVE MODEL OF AN UNSETTLED QUESTION</p>
+    <h1 id="main-title">The world keeps<br><em>turning.</em> And opening.</h1>
+    <p class="hero-copy">Are there more doors or wheels on Earth? Follow a researched estimate of both—and see just how much the answer depends on what we assume.</p>
+   </div>
+   <div class="hero-note"><span class="note-number">10 / 19 / 26</span><span>Model baseline<br><strong>19 October 2026 · UTC</strong></span><a href="#method">How this is counted <span aria-hidden="true">↓</span></a></div>
+  </section>
+
+  <section class="shell counter-section" id="counter" aria-labelledby="counter-title">
+   <div class="section-top"><h2 class="eyebrow" id="counter-title">THE ESTIMATED COUNT, RIGHT NOW</h2><button class="text-button" id="pause" type="button" aria-pressed="false">Pause counters <span aria-hidden="true">Ⅱ</span></button></div>
+   <div class="counters">
+    <article class="counter-panel door-panel" aria-labelledby="doors-label">
+     <div class="panel-head"><h3 id="doors-label">Doors</h3><span class="panel-symbol door-symbol" aria-hidden="true"><i></i></span></div>
+     <div class="counter-number" id="doors-count" aria-hidden="true">78,500,000,000</div>
+     <p class="sr-only" id="doors-accessible">Approximately 78.5 billion estimated doors.</p>
+     <p class="count-caption">MODEL CALCULATION · NOT A MEASURED TALLY</p>
+     <div class="panel-foot"><div><strong id="doors-rate">+53</strong><span>modeled net / second</span></div><div class="range-note"><strong id="doors-range">44.5–123B</strong><span>assumption range</span></div></div>
+    </article>
+    <article class="counter-panel wheel-panel" aria-labelledby="wheels-label">
+     <div class="panel-head"><h3 id="wheels-label">Wheels</h3><span class="panel-symbol wheel-symbol" aria-hidden="true"><i></i><b></b></span></div>
+     <div class="counter-number" id="wheels-count" aria-hidden="true">98,000,000,000</div>
+     <p class="sr-only" id="wheels-accessible">Approximately 98 billion estimated wheels.</p>
+     <p class="count-caption">MODEL CALCULATION · NOT A MEASURED TALLY</p>
+     <div class="panel-foot"><div><strong id="wheels-rate">+166</strong><span>modeled net / second</span></div><div class="range-note"><strong id="wheels-range">49.8–171B</strong><span>assumption range</span></div></div>
+    </article>
+   </div>
+   <div class="comparison"><div class="balance-bar" aria-hidden="true"><span id="door-share"></span><span id="wheel-share"></span></div><div class="comparison-text"><strong id="lead">Wheels lead by about 19.5 billion in this model.</strong><span id="scenario-status">Default assumptions</span></div></div>
+   <p class="counter-explanation">The moving digits show elapsed-time arithmetic. Uncertainty is billions of objects, not individual units. These ranges are stress tests, <strong>not confidence intervals</strong>; they overlap, so the real winner remains unresolved.</p>
+   <div class="time-row"><span id="clock-status">Connecting the model to your clock…</span><span>Sources reviewed 19 October 2026 <span aria-hidden="true">·</span> v2026.10.19</span></div>
+   <p class="review-alert" id="review-alert" hidden></p>
+  </section>
+
+  <section class="assumptions-section" id="assumptions" aria-labelledby="assumptions-title">
+   <div class="shell assumptions-layout">
+    <div class="section-intro"><p class="eyebrow">THE ASSUMPTIONS</p><h2 id="assumptions-title">Small objects.<br>Big swing.</h2><p>A few more cupboard doors in each home can change the answer. So can the fraction of toy wheels that still exist.</p><p class="quiet">These controls change your scenario, not the underlying evidence. The annual-flow controls apply to every included category.</p><div class="action-row"><button id="reset" class="button secondary" type="button">Reset model</button><button id="share" class="button secondary" type="button">Copy scenario link</button></div></div>
+    <div class="controls">
+     <div class="control"><label for="cabinets">Cabinet doors per household <output id="cabinets-value" for="cabinets">14</output></label><input id="cabinets" type="range" min="6" max="26" step="1" value="14"><p>Individual cupboard and wardrobe doors. Each extra one adds 2.5 billion at baseline.</p></div>
+     <div class="control"><label for="survival">Hot Wheels positions still surviving <output id="survival-value" for="survival">60%</output></label><input id="survival" type="range" min="30" max="90" step="1" value="60"><p>Applied to 10 billion cars × approximately four wheels. Survival is assumed, not measured.</p></div>
+     <div class="control"><label for="otherToys">Other toy-wheel stocks <output id="otherToys-value" for="otherToys">100%</output></label><input id="otherToys" type="range" min="50" max="150" step="5" value="100"><p>Scale other toy vehicles and construction wheels, including their assumed annual flows.</p></div>
+     <details class="flow-controls"><summary>Change how quickly the counters move</summary><div class="control"><label for="production">Annual manufacture <output id="production-value" for="production">100%</output></label><input id="production" type="range" min="50" max="150" step="5" value="100"><p>Percentage of the model’s gross production assumptions.</p></div><div class="control"><label for="destruction">Annual physical destruction <output id="destruction-value" for="destruction">100%</output></label><input id="destruction" type="range" min="50" max="200" step="5" value="100"><p>Recycling, combustion and breakage that destroys the qualifying component. Disposal alone does not remove an intact object.</p></div></details>
+     <label class="check-control"><input id="toys" type="checkbox" checked><span>Include toys on both sides<small>Working toy doors and all qualifying toy wheels.</small></span></label>
+     <p id="assumption-result" class="scenario-result" aria-live="polite"></p>
+     <p id="action-feedback" class="action-feedback" role="status"></p>
+    </div>
+   </div>
+  </section>
+
+  <section class="shell breakdown-section" id="breakdown" aria-labelledby="breakdown-title">
+   <div class="section-intro wide"><p class="eyebrow">OPEN THE MODEL</p><h2 id="breakdown-title">Where the billions come from.</h2><p>Every row is a modeled category. Expand one for its calculation, source links, and limitations. Values follow your selected scenario; excluded toys appear as zero.</p></div>
+   <div class="breakdown-columns"><div><h3 class="column-heading door-text">Doors <span id="door-category-total"></span></h3><div id="door-categories"></div></div><div><h3 class="column-heading wheel-text">Wheels <span id="wheel-category-total"></span></h3><div id="wheel-categories"></div></div></div>
+  </section>
+
+  <section class="method-section" id="method" aria-labelledby="method-title"><div class="shell">
+   <p class="eyebrow">HOW THE CLOCK MOVES</p><div class="method-heading"><h2 id="method-title">An estimate with<br>its workings left in.</h2><p>Published statistics anchor selected inputs. The total inventories and all physical-destruction rates remain assumptions. More sources do not make those gaps disappear.</p></div>
+   <div class="equation"><span>Starting stock</span><b>+</b><span>Newly manufactured</span><b>−</b><span>Physically destroyed</span><b>=</b><strong>Estimated stock now</strong></div>
+   <div class="flow-table-wrap"><table class="flow-table"><caption>Annual flows at your settings · billions of individual components per year</caption><thead><tr><th scope="col">Category</th><th scope="col">Manufactured</th><th scope="col">Destroyed</th><th scope="col">Net change</th></tr></thead><tbody id="flow-totals"></tbody></table></div>
+   <div class="method-grid"><article><h3>01. A fixed starting point</h3><p>The reference case begins at 78.5 billion doors and 98 billion wheels on 19 October 2026 at 00:00 UTC. These are editorial estimates informed by the research below. The displayed total is calculated directly from your device’s clock, so reloading does not reset it.</p></article><article><h3>02. Production is not growth</h3><p>New products often replace old ones. The model subtracts an explicit physical-loss allowance. Hot Wheels and road-vehicle production have recent anchors; most other manufacture rates and every destruction rate are assumptions. Gross tire sales are never added as extra wheels.</p></article><article><h3>03. An honest time horizon</h3><p>The clock projects linearly for one year after the baseline. It stops when that horizon expires and asks for a research update. It does not collect new statistics automatically. “Pause” freezes the display; resuming catches up to the current model time.</p></article><article><h3>04. Uncertainty comes first</h3><p>Starting-stock ranges are judgmental stress tests. To widen them over time, low scenarios use half of gross manufacture and twice the destruction; high scenarios use 1.5× manufacture and half the destruction. These are not probabilities, statistical error bars, or independently sampled variables.</p></article></div>
+   <details class="definitions"><summary>What counts—and where the model is incomplete</summary><div class="definition-grid"><div><h3>Counted</h3><p>Movable doors that open passages or compartments; functional wheels on vehicles, furniture, toys and small guide mechanisms; steering wheels; intact spare and stored components. Two wheel discs on a twin caster count as two. A tire plus its rim counts once. A door on wheels contributes to both categories.</p></div><div><h3>Outside this convention</h3><p>Ordinary lids and caps, windows, drawer fronts, decorative molded doors, painted wheels, gears, pulleys, sprockets and ball bearings. Long conveyor rollers are excluded. Toy doors must actually open.</p></div><div><h3>Known gaps</h3><p>There is no comprehensive global inventory of cabinet doors, chairs, luggage wheels or intact discarded components. In-use statistics are imperfect proxies for extant stock. The miscellaneous allowances do not solve landfill coverage. Household averages are not universally representative.</p></div><div><h3>A revised starting estimate</h3><p>The earlier exploratory wheel total was 89 billion. This version adds 4 billion Hot Wheels wheels after newer cumulative-production reporting, and 5 billion construction-toy wheels after a later LEGO output series. Both revisions still depend on unmeasured survival. The door baseline remains 78.5 billion.</p></div></div></details>
+   <div class="download-row"><button id="download" class="button" type="button">Download this model <span aria-hidden="true">↓</span></button><p>A JSON snapshot with your settings, category counts, annual assumptions and the complete source ledger.</p></div>
+  </div></section>
+
+  <section class="shell evidence-section" id="evidence" aria-labelledby="evidence-title"><div class="section-intro wide"><p class="eyebrow">THE EVIDENCE, WITH ITS LIMITS</p><h2 id="evidence-title">Show your sources.</h2><p>A source can establish the scale of an industry without establishing today’s surviving stock. These notes explain exactly what each reference contributes.</p></div><div id="source-list" class="source-list"></div><details class="research-note"><summary>Research approach and rejected shortcuts</summary><p>Reviewed institutional demographic and building-stock research; industry vehicle statistics; appliance assessments; toy-company cumulative and annual output; selected chair, caster and luggage disclosures; and waste/reuse evidence. Priority went to primary reports and attributable company statements. Company promotional figures are identified as such.</p><p>Excluded dollar-market forecasts converted into unit counts without a defensible unit price, unsupported global office-chair and luggage totals, double-counting imported/exported products, adding supplier caster output to products already counted, treating tire replacements as new wheels, and treating reuse or service retirement as physical destruction.</p><p>Research reviewed on 19 October 2026. Source observation years differ. The review found no representative global cabinet-door average or credible worldwide component-destruction series. The counter is consequently a scenario-based educational estimate, not a real-time census.</p></details></section>
+ </main>
+ <footer class="shell"><a class="brand" href="#top">DOORS / WHEELS</a><p>Keep counting. Keep questioning.</p><a href="#method">Model v2026.10.19 <span aria-hidden="true">↑</span></a></footer>
+ <noscript><p class="shell">JavaScript is needed for live updates and the interactive model. The numbers above are the starting assumptions, not current observed counts.</p></noscript>
+</body>
+</html>
